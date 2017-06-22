@@ -21,7 +21,6 @@
 	</header>
 	<section class="slide" id="cover" style="padding-top: 30px; position: relative">
 		<h2>Управляемые каскады<br/> в React-компонентах</h2>
-		<p>Агалаков Кирилл, DevExperts</p>
 		<img src="pictures/bg.png" alt="" class="cover">
 		<img src="pictures/dx.png" alt="" class="dx">
 		<!--
@@ -32,21 +31,21 @@
 			#cover {
 				/*background-color: rgb(0, 81, 124);*/
 			}
-
+			
 			.dx {
 				position: absolute;
 				bottom: 12px;
-				right: 100px;
+				right: 70px;
 				height: 110px;
 			}
-
+			
 			#cover h2 {
 				margin: 30px 0 0;
 				color: #FFF;
 				text-align: center;
 				font-size: 70px;
 			}
-
+			
 			#cover p {
 				margin: 10px 0 0;
 				text-align: center;
@@ -54,61 +53,80 @@
 				font-style: italic;
 				font-size: 20px;
 			}
-
+			
 			#cover p a {
 				color: #FFF;
 			}
-
+			
 			.slide_dx-components {
 				display: flex;
 				flex-direction: column;
 				align-items: flex-start;
 			}
-
+			
 			.img_dx-components {
 				flex: 1
 			}
-
+			
 			.images {
 				display: flex;
 				align-items: flex-start;
 			}
-
+			
 			.images img {
 				margin-right: 5px;
 				max-width: 100%;
 			}
-
+			
 			img {
 				max-width: 100%;
 				height: auto
 			}
-
+			
 			.slide {
 				background: no-repeat url('pictures/bg_gjcb7t.png');
 				background-size: cover;
 				user-select: none;
 			}
-
+			
 			.slide h2 {
 				color: white;
 			}
-
+			
 			.slide pre code {
 				background: rgba(255, 255, 255, 0.8);
 			}
-
+			
 			.slide ul {
 				color: white;
 				font-size: 40px;
+				font-weight: bold;
 			}
-
-			.slide ul>li:before {
+			
+			.slide ul > li:before {
 				color: inherit;
+			}
+			
+			.slide pre mark {
+				padding: 0px 8px;
+				margin: 1px;
+				z-index: 0;
+			}
+			
+			.slide pre .comment {
+				color: #57A64A;
+			}
+			
+			.slide pre .keyword {
+				color: #569CD6;
+			}
+			
+			h1, h2, li {
+				text-shadow: 1px 1px rgba(0, 0, 0, 0.4);
 			}
 		</style>
 	</section>
-
+	
 	<section class="slide">
 		<h2 style="width: 710px;position: relative;top: -105px;">
 			DXTrade5, DXBinWeb, PhinomWeb, TOSLC, TOSMX, TradexWeb, QuantexUI, DXFeed...
@@ -126,21 +144,21 @@
 			<img src="pictures/phinom-filter.png" alt="">
 		</div>
 	</section>
-
-	<section class="slide">
-		<h2>
-			Whitelabeling
-		</h2>
-		<div class="images" style="flex-wrap: wrap;align-items: center;justify-content: space-around;">
-			<img src="pictures/acm.png" alt="">
-			<img src="pictures/dxtf.png" alt="">
-			<img src="pictures/tf-w.png" alt="">
-			<img src="pictures/dxtf.png" alt="">
-			<img src="pictures/gedik.png" alt="">
-			<img src="pictures/alpari.png" alt="">
-		</div>
-	</section>
-
+	
+	<!--<section class="slide">-->
+		<!--<h2>-->
+			<!--Whitelabeling-->
+		<!--</h2>-->
+		<!--<div class="images" style="flex-wrap: wrap;align-items: center;justify-content: space-around;">-->
+			<!--<img src="pictures/acm.png" alt="">-->
+			<!--<img src="pictures/dxtf.png" alt="">-->
+			<!--<img src="pictures/tf-w.png" alt="">-->
+			<!--<img src="pictures/dxtf.png" alt="">-->
+			<!--<img src="pictures/gedik.png" alt="">-->
+			<!--<img src="pictures/alpari.png" alt="">-->
+		<!--</div>-->
+	<!--</section>-->
+	
 	<section class="slide">
 		<h2>dx-ui, tos-ui, tradex-ui</h2>
 		<div class="images">
@@ -149,7 +167,7 @@
 			<img src="pictures/dx-ui-datepicker.PNG" alt="">
 		</div>
 	</section>
-
+	
 	<section class="slide">
 		<h2>dx-components</h2>
 		<div class="images">
@@ -160,29 +178,30 @@
 			</div>
 		</div>
 	</section>
-
+	
 	<section class="slide" style="background: no-repeat url('pictures/css-is-awesome.png'); background-size: cover">
 		<h2>Наболевшее</h2>
 	</section>
-
+	
 	<section class="slide">
 		<h2>Global Scope</h2>
 		<pre>
 			<code><span class="comment">/* button1.css */</span></code>
 			<code>.button {</code>
-			<code>    color: red;</code>
+			<code>    color: <mark>red</mark>;</code>
 			<code>}</code>
 			<code><span class="comment">/* button2.css */</span></code>
 			<code>.button {</code>
-			<code>    color: blue;</code>
+			<code>    color: <mark>blue</mark>;</code>
 			<code>}</code>
 		</pre>
 	</section>
-
-	<section class="slide" style="background: no-repeat url('pictures/58dcbbd8354a3.png'); background-size: cover; padding-top: 50px">
+	
+	<section class="slide"
+			 style="background: no-repeat url('pictures/58dcbbd8354a3.png'); background-size: cover; padding-top: 50px">
 		<h2>Попытки решения</h2>
 	</section>
-
+	
 	<section class="slide">
 		<div style="text-align: center; color: white; font-size: 60px; font-weight: bold;">
 			<h1>БЭМ</h1>
@@ -190,7 +209,7 @@
 			<h1>Shadow DOM</h1>
 		</div>
 	</section>
-
+	
 	<section class="slide">
 		<h2>CSS-modules!</h2>
 		<ul>
@@ -199,28 +218,29 @@
 			<li>Удобство отладки</li>
 		</ul>
 	</section>
-
-	<section class="slide">
+	
+	<section class="slide" style="padding-top: 50px">
 		<h2>CSS-modules!</h2>
 		<pre style="font-size: 21px;">
 			<code><span class="comment">/* Button.css */</span></code>
-			<code>.container {</code>
+			<code><mark>container</mark> {</code>
 			<code>    color: red;</code>
 			<code>}</code>
 			<code><span class="comment">/* Button.jsx */</span></code>
+			<code>import <mark>css</mark> from './Button.css';</code>
 			<code>const Button = () => (</code>
-			<code>    &lt;button className={css.container}&gt;&lt;/button&gt;</code>
+			<code>    &lt;button className={<mark>css.container</mark>}&gt;&lt;/button&gt;</code>
 			<code>);</code>
 			<code><span class="comment">/* html */</span></code>
-			<code>&lt;button class="Button__container_34DSF"&gt;&lt;/button&gt;</code>
+			<code>&lt;button class="<mark>Button__container_34DSF</mark>"&gt;&lt;/button&gt;</code>
 		</pre>
 	</section>
-
+	
 	<section class="slide" style="background: no-repeat url('pictures/ahi_manawa.png'); background-size: cover">
 		<h2 style="margin-top: 70px;font-size: 72px;">LIVE CODING!</h2>
 	</section>
-
-	<section class="slide" style="background: no-repeat url('pictures/minimalistic-landscape-mountains-forest-bird-sky-artwork.jpg'); background-size: cover">
+	
+	<section class="slide">
 		<h2>Заключение</h2>
 		<ul>
 			<li>Гибкость без нарушений</li>
@@ -229,12 +249,12 @@
 			<li>Мощь инфраструктуры</li>
 		</ul>
 	</section>
-
-	<section class="slide">
-		<h2>Спасибо за внимание!<br/>Q&A</h2>
-		<img src="pictures/bg.png" alt="" class="cover">
+	
+	<section class="slide"
+			 style="background: no-repeat url('pictures/minimalistic-landscape-mountains-forest-bird-sky-artwork.jpg'); background-size: cover">
+		<h2 style="position: relative;top: -65px;left: -135px;text-align: right;">Спасибо за внимание!<br/>Q&A</h2>
 	</section>
-
+	
 	<p class="badge">
 		<a href="https://github.com/shower/shower">Fork me on GitHub</a>
 	</p>
